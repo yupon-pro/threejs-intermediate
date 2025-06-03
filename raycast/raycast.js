@@ -12,6 +12,10 @@ const renderer = new THREE.WebGLRenderer({ canvas });
 renderer.setSize(width, height);
 renderer.setPixelRatio(window.devicePixelRatio);
 
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height);
+camera.position.set(0, 0, +1000);
+
 const geometry = new THREE.BoxGeometry(50, 50, 50);
 
 // マウスとの交差を調べたいものは配列に格納する
